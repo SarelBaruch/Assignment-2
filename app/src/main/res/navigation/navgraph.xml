@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/fragmentOne">
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.example.myfragmentapp.fragments.FragmentOne"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one" >
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentThree"
+            app:destination="@id/fragmentThree" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.example.myfragmentapp.fragments.FragmentTwo"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" >
+        <action
+            android:id="@+id/action_fragmentTwo_to_fragmentFour"
+            app:destination="@id/fragmentFour" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentThree"
+        android:name="com.example.myfragmentapp.fragments.FragmentThree"
+        android:label="fragment_three"
+        tools:layout="@layout/fragment_three" >
+        <action
+            android:id="@+id/action_fragmentThree_to_fragmentOne"
+            app:destination="@id/fragmentOne" />
+        <action
+            android:id="@+id/action_fragmentThree_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFour"
+        android:name="com.example.myfragmentapp.fragments.fragmentFour"
+        android:label="fragment__four"
+        tools:layout="@layout/fragment__four" >
+        <action
+            android:id="@+id/action_fragmentFour_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+    </fragment>
+</navigation>
